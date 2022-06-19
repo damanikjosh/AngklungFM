@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT name="AngklungFM" companyName="KAIST GCT" version="1.0.0" userNotes="Explores the DSP module."
+              companyWebsite="https://mac.kaist.ac.kr/~juhan/gct535/" projectType="audioplug"
+              pluginAUIsSandboxSafe="1" pluginManufacturer="KAIST GCT" pluginFormats="buildAU,buildStandalone,buildVST,buildVST3"
+              useAppConfig="0" addUsingNamespaceToJuceHeader="1" id="e4o5j4"
+              jucerFormatVersion="1" pluginCharacteristicsValue="pluginIsSynth,pluginWantsMidiIn"
+              displaySplashScreen="1">
+  <MAINGROUP id="vft9bk" name="AngklungFM">
+    <GROUP id="{EB40E8D3-2450-AD44-5CFD-FB19E200CFC8}" name="Source">
+      <FILE id="m3HLLl" name="FMSynth.h" compile="0" resource="0" file="Source/FMSynth.h"/>
+      <FILE id="ZoJYRq" name="ADSR.h" compile="0" resource="0" file="Source/ADSR.h"/>
+      <FILE id="OgWyZV" name="AngklungFM.h" compile="0" resource="0" file="Source/AngklungFM.h"/>
+      <FILE id="Txjtnl" name="ScopeComponent.h" compile="0" resource="0"
+            file="Source/ScopeComponent.h"/>
+      <FILE id="mFCT8j" name="ScopeDataCollector.h" compile="0" resource="0"
+            file="Source/ScopeDataCollector.h"/>
+      <FILE id="uQBFHc" name="AudioBufferQueue.h" compile="0" resource="0"
+            file="Source/AudioBufferQueue.h"/>
+      <FILE id="qmM3x7" name="AudioEngine.h" compile="0" resource="0" file="Source/AudioEngine.h"/>
+      <FILE id="dLOYrW" name="Main.cpp" compile="1" resource="0" file="Source/Main.cpp"/>
+      <FILE id="ia4HJ5" name="CustomOscillator.h" compile="0" resource="0"
+            file="Source/CustomOscillator.h"/>
+      <FILE id="Z4bo9B" name="Voice.h" compile="0" resource="0" file="Source/Voice.h"/>
+    </GROUP>
+  </MAINGROUP>
+  <MODULES>
+    <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_devices" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_formats" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_plugin_client" showAllCode="1" useLocalCopy="0"
+            useGlobalPath="1"/>
+    <MODULE id="juce_audio_processors" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_utils" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_dsp" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_events" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+  </MODULES>
+  <EXPORTFORMATS>
+    <XCODE_MAC targetFolder="Builds/MacOSX">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug"/>
+        <CONFIGURATION isDebug="0" name="Release"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_audio_basics" path="../../juce"/>
+        <MODULEPATH id="juce_audio_devices" path="../../juce"/>
+        <MODULEPATH id="juce_audio_formats" path="../../juce"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="../../juce"/>
+        <MODULEPATH id="juce_audio_processors" path="../../juce"/>
+        <MODULEPATH id="juce_audio_utils" path="../../juce"/>
+        <MODULEPATH id="juce_core" path="../../juce"/>
+        <MODULEPATH id="juce_data_structures" path="../../juce"/>
+        <MODULEPATH id="juce_dsp" path="../../juce"/>
+        <MODULEPATH id="juce_events" path="../../juce"/>
+        <MODULEPATH id="juce_graphics" path="../../juce"/>
+        <MODULEPATH id="juce_gui_basics" path="../../juce"/>
+        <MODULEPATH id="juce_gui_extra" path="../../juce"/>
+      </MODULEPATHS>
+    </XCODE_MAC>
+  </EXPORTFORMATS>
+  <JUCEOPTIONS JUCE_VST3_CAN_REPLACE_VST2="0"/>
+</JUCERPROJECT>
