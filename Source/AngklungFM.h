@@ -172,56 +172,6 @@ public:
 
 private:
 //    ==============================================================================
-//    class AngklungFMAudioProcessorEditor : public juce::AudioProcessorEditor
-//    {
-//    public:
-//        AngklungFMAudioProcessorEditor(AngklungFM& p)
-//            : AudioProcessorEditor(&p),
-//            dspProcessor(p),
-//            scopeComponent(dspProcessor.getAudioBufferQueue())
-//        {
-//            addAndMakeVisible(midiKeyboardComponent);
-//            addAndMakeVisible(scopeComponent);
-//
-//            setSize(400, 300);
-//
-//            auto area = getLocalBounds();
-//            scopeComponent.setTopLeftPosition(0, 80);
-//            scopeComponent.setSize(area.getWidth(), area.getHeight() - 100);
-//
-//            midiKeyboardComponent.setMidiChannel(1);
-//            midiKeyboardState.addListener(&dspProcessor.getMidiMessageCollector());
-//        }
-//
-//        ~AngklungFMAudioProcessorEditor() override
-//        {
-//            midiKeyboardState.removeListener(&dspProcessor.getMidiMessageCollector());
-//        }
-//
-//        //==============================================================================
-//        void paint(juce::Graphics& g) override
-//        {
-//            g.fillAll(getLookAndFeel().findColour(juce::ResizableWindow::backgroundColourId));
-//        }
-//
-//        void resized() override
-//        {
-//            auto area = getLocalBounds();
-//            midiKeyboardComponent.setBounds(area.removeFromTop(80).reduced(8));
-//        }
-//
-//    private:
-//        //==============================================================================
-//
-//        AngklungFM& dspProcessor;
-//        juce::MidiKeyboardState midiKeyboardState;
-//        juce::MidiKeyboardComponent midiKeyboardComponent{ midiKeyboardState, juce::MidiKeyboardComponent::horizontalKeyboard };
-//        ScopeComponent<float> scopeComponent;
-//
-//        JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR(AngklungFMAudioProcessorEditor)
-//    };
-
-//    ==============================================================================
     juce::AudioParameterFloat* speed;
     juce::AudioProcessorValueTreeState parameters;
     AudioEngine audioEngine;
@@ -249,9 +199,9 @@ private:
 //        params.push_back(std::make_unique<juce::AudioParameterFloat>("CUTOFF", "Cutoff Freq", juce::NormalisableRange<float> { 20.0f, 2000.0f, 1.0f }, 1000.0f));
 
         // Modulator ADSR
-////        params.push_back(std::make_unique<juce::AudioParameterFloat>("MODATTACK", "Modulator Attack", juce::NormalisableRange<float> { 0.00f, 1.00f, 0.001f }, 0.0f));
-////        params.push_back(std::make_unique<juce::AudioParameterFloat>("MODDECAY", "Modulator Decay", juce::NormalisableRange<float> { 0.00f, 1.00f, 0.01f }, 0.01f));
-////        params.push_back(std::make_unique<juce::AudioParameterFloat>("MODSUSTAIN", "Modulator Sustain", juce::NormalisableRange<float> { 0.01f, 1.00f, 0.01f }, 1.0f));
+//        params.push_back(std::make_unique<juce::AudioParameterFloat>("MODATTACK", "Modulator Attack", juce::NormalisableRange<float> { 0.00f, 1.00f, 0.001f }, 0.0f));
+//        params.push_back(std::make_unique<juce::AudioParameterFloat>("MODDECAY", "Modulator Decay", juce::NormalisableRange<float> { 0.00f, 1.00f, 0.01f }, 0.01f));
+//        params.push_back(std::make_unique<juce::AudioParameterFloat>("MODSUSTAIN", "Modulator Sustain", juce::NormalisableRange<float> { 0.01f, 1.00f, 0.01f }, 1.0f));
 //        params.push_back(std::make_unique<juce::AudioParameterFloat>("MODRELEASE", "Modulator Release", juce::NormalisableRange<float> { 0.00f, 3.00f, 0.01f }, 0.25f));
 //
 //        // Carrier ADSR
