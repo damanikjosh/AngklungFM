@@ -190,7 +190,7 @@ private:
 
         // FM modulator
 //        params.push_back(std::make_unique<juce::AudioParameterFloat>("FMFREQRAT", "FM Freq Ratio", juce::NormalisableRange<float> { 0.01f, 10.00f, 0.01f }, 3.10f));
-        params.push_back(std::make_unique<juce::AudioParameterFloat>("FMDEPTH", "Brightness", juce::NormalisableRange<float> { 0.00f, 1.0f, 0.001f }, 0.154f));
+        params.push_back(std::make_unique<juce::AudioParameterFloat>("FMDEPTH", "Brightness", juce::NormalisableRange<float> { 0.00f, 0.5f, 0.001f }, 0.154f));
 
         // Appregio
         params.push_back(std::make_unique<juce::AudioParameterFloat>("SPEED", "Shake frequency", juce::NormalisableRange<float> { 0.00f, 1.00f, 0.01f }, 0.85f));
